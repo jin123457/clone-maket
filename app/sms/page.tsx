@@ -1,5 +1,5 @@
-import FormInput from "@/components/form-input";
-import FormButton from "@/components/form-btn";
+import Input from "@/components/input";
+import Button from "@/components/button";
 
 export default function SmsLogin() {
   return (
@@ -9,21 +9,19 @@ export default function SmsLogin() {
         <h2 className="text-xl">Verify your phone number</h2>
       </div>
       <form className="flex flex-col gap-3">
-        <FormInput
+        <Input
           name="phone_number"
           type="number"
           placeholder="Phone Number"
           required
-          errors={[]}
         />
-        <FormInput
+        <Input
           name="verify_code"
           type="number"
           placeholder="Verfication code"
           required
-          errors={[]}
         />
-        <FormButton text={`Verify`} />
+        <Button text={`Verify`} />
       </form>
     </div>
   );
