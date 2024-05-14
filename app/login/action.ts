@@ -57,7 +57,6 @@ export async function handleLogin(_: any, formData: FormData) {
       result.data.password,
       user!.password ?? "xxx"
     );
-    console.log(ok);
     if (ok) {
       const session = await getSession();
       session.id = user!.id;
